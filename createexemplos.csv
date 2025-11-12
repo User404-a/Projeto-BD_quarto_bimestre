@@ -1,0 +1,6 @@
+CREATE TABLE alunos (
+  ra INTEGER PRIMARY KEY,
+  nome TEXT VARCHAR(50),
+  curso TEXT VARCHAR(25),
+  periodo TEXT VARCHAR(25)
+);
