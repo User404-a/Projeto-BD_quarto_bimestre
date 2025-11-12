@@ -1,4 +1,5 @@
 const { Client } = require('pg');
+
 const client = new Client({
   host: 'localhost',
   port: 5432,
@@ -6,10 +7,9 @@ const client = new Client({
   password: 'sua_senha',
   database: 'seu_banco'
 });
-client.connect(err => {
-  if (err) console.log('Erro:', err);
-  else {
-    console.log('Conectado ao PostgreSQL');
-    client.end();
-  }
-});
+
+client.connect()
+  .then(() => console.log('Conectado ao PostgreSQL'))
+  .catch(err => console.error('Erro de conexão:', err));
+
+module.exports = client;
