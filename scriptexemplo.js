@@ -5,7 +5,6 @@ const atributos = ['ra', 'nome', 'curso', 'periodo'];
 
 async function testar(A, B) {
   if (A === B) return;
-
   const sql = `
     SELECT 1
     FROM ${tabela}
